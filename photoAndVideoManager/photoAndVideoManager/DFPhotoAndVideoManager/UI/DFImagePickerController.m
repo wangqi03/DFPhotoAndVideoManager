@@ -82,11 +82,19 @@
     [self.collectionview registerNib:[UINib nibWithNibName:@"DFImagePickerCell" bundle:nil] forCellWithReuseIdentifier:@"DFImagePickerCell"];
     
     [self addACancelButton];
+    [self performSelector:@selector(scrollToBottom) withObject:nil afterDelay:0.1];
 }
 
 - (void)setItems:(NSMutableArray<PHAsset *> *)items {
     _items = items;
     [self.collectionview reloadData];
+    [self performSelector:@selector(scrollToBottom) withObject:nil afterDelay:0.1];
+}
+
+- (void)scrollToBottom {
+    if (_items.count) {
+        [self.collectionview scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:_items.count-1 inSection:0] atScrollPosition:UICollectionViewScrollPositionTop animated:NO];
+    }
 }
 
 - (UICollectionView*)myCollectionView {

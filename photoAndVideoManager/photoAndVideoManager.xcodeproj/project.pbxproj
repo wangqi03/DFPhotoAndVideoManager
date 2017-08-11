@@ -430,7 +430,7 @@
 				DEVELOPMENT_TEAM = W4M79BF28V;
 				INFOPLIST_FILE = photoAndVideoManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wang.photoAndVideoManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wang.generalTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -442,7 +442,7 @@
 				DEVELOPMENT_TEAM = W4M79BF28V;
 				INFOPLIST_FILE = photoAndVideoManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wang.photoAndVideoManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wang.generalTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
