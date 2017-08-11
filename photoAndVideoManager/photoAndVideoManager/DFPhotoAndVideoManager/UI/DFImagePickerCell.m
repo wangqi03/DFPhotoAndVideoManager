@@ -54,7 +54,7 @@
     [super setSelected:selected];
     
     self.selectTick.hidden = !selected;
-    self.myImage.alpha = selected?.8:1;
+    self.myImage.alpha = selected?.6:1;
 }
 
 @end

@@ -28,7 +28,13 @@
         PHFetchResult<PHAssetCollection*> *result = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAny options:option];
         
         [result enumerateObjectsUsingBlock:^(PHAssetCollection*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            [collection addObject:obj];
+            
+            if ([obj.localizedTitle isEqualToString:@"Hidden"]||[obj.localizedTitle isEqualToString:@"已隐藏"]) {
+                
+            } else {
+                [collection addObject:obj];
+            }
+            
         }];
         
         completion(collection);
