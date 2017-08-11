@@ -82,6 +82,11 @@
     [self addACancelButton];
 }
 
+- (void)setItems:(NSMutableArray<PHAsset *> *)items {
+    _items = items;
+    [self.collectionview reloadData];
+}
+
 - (UICollectionView*)myCollectionView {
     
     UICollectionViewFlowLayout* layout = [[UICollectionViewFlowLayout alloc] init];

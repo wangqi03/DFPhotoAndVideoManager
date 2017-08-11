@@ -111,14 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				AAC481ED1F3D55D7009F6150 /* DFPhotoAndVideoManager */,
-				AAC481CB1F3D55C0009F6150 /* AppDelegate.h */,
-				AAC481CC1F3D55C0009F6150 /* AppDelegate.m */,
 				AAC481CE1F3D55C0009F6150 /* ViewController.h */,
 				AAC481CF1F3D55C0009F6150 /* ViewController.m */,
 				AAC481D11F3D55C0009F6150 /* Main.storyboard */,
-				AAC481D41F3D55C0009F6150 /* Assets.xcassets */,
-				AAC481D61F3D55C0009F6150 /* LaunchScreen.storyboard */,
-				AAC481D91F3D55C0009F6150 /* Info.plist */,
 				AAC481C81F3D55C0009F6150 /* Supporting Files */,
 			);
 			path = photoAndVideoManager;
@@ -127,6 +122,11 @@
 		AAC481C81F3D55C0009F6150 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AAC481CB1F3D55C0009F6150 /* AppDelegate.h */,
+				AAC481CC1F3D55C0009F6150 /* AppDelegate.m */,
+				AAC481D41F3D55C0009F6150 /* Assets.xcassets */,
+				AAC481D61F3D55C0009F6150 /* LaunchScreen.storyboard */,
+				AAC481D91F3D55C0009F6150 /* Info.plist */,
 				AAC481C91F3D55C0009F6150 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -432,7 +432,7 @@
 				DEVELOPMENT_TEAM = W4M79BF28V;
 				INFOPLIST_FILE = photoAndVideoManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wang.photoAndVideoManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wang.photoAndVideoManager2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -444,7 +444,7 @@
 				DEVELOPMENT_TEAM = W4M79BF28V;
 				INFOPLIST_FILE = photoAndVideoManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wang.photoAndVideoManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wang.photoAndVideoManager2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

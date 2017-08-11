@@ -9,7 +9,7 @@
 #import "DFImagePickerController.h"
 
 @interface DFPhotoAndVideoManager()<PHPhotoLibraryChangeObserver>
-
+@property (nonatomic) BOOL isObservingPhotoChange;
 @end
 
 @implementation DFPhotoAndVideoManager
@@ -72,18 +72,21 @@
 }
 
 - (void)initManager {
-    [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
+    
 }
 
 - (void)dealloc {
-    [[PHPhotoLibrary sharedPhotoLibrary] unregisterChangeObserver:self];
+    self.isObservingPhotoChange = NO;
 }
 
 - (void)guaranteeAuthBeforeDoing:(void (^)())thingsToDo {
     
     switch ([PHPhotoLibrary authorizationStatus]) {
         case PHAuthorizationStatusAuthorized:
+        {
+            self.isObservingPhotoChange = YES;
             thingsToDo();
+        }
             break;
         case PHAuthorizationStatusNotDetermined:
         {
@@ -106,6 +109,20 @@
 }
 
 #pragma mark - PHPhotoLibraryChangeObserver
+- (void)setIsObservingPhotoChange:(BOOL)isObservingPhotoChange {
+    if (_isObservingPhotoChange == isObservingPhotoChange) {
+        return;
+    }
+    
+    _isObservingPhotoChange = isObservingPhotoChange;
+    
+    if (_isObservingPhotoChange) {
+        [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
+    } else {
+        [[PHPhotoLibrary sharedPhotoLibrary] unregisterChangeObserver:self];
+    }
+}
+
 - (void)photoLibraryDidChange:(PHChange *)changeInstance {
     // TODO: tbc...handler library change here
 }

@@ -12,7 +12,7 @@
 
 @optional
 - (void)photoAndVideoManagerDidFailAccessingUserAlbum;
-- (UIImage*_Nonnull)placeHolderImageForAlbumCover;
+- (UIImage*_Nonnull)placeHolderImageForEmptyAlbumCover;
 - (void)imagePickerDidDismissWithAssets:(NSArray<PHAsset*>*)assets;
 
 @end

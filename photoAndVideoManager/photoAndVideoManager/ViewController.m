@@ -7,23 +7,35 @@
 //
 
 #import "ViewController.h"
+#import "DFPhotoAndVideoManager.h"
 
-@interface ViewController ()
+@interface ViewController ()<DFPhotoAndVideoManagerDelegate>
 
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+- (IBAction)showImagePicker:(id)sender {
+    [DFPhotoAndVideoManager manager].delegate = self;
+    UINavigationController* navi = [[UINavigationController alloc] init];
+    [[DFPhotoAndVideoManager manager] embedImagePickerInNavigationController:navi];
+    [self presentViewController:navi animated:YES completion:nil];
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - DFPhotoAndVideoManagerDelegate
+- (void)photoAndVideoManagerDidFailAccessingUserAlbum {
+    NSLog(@"ERROR: failed to get photo library access");
 }
 
+- (UIImage*_Nonnull)placeHolderImageForEmptyAlbumCover {
+    return nil;
+}
+
+- (void)imagePickerDidDismissWithAssets:(NSArray<PHAsset*>*)assets {
+    self.resultLabel.text = [NSString stringWithFormat:@"%d assets selected",assets.count];
+}
 
 @end

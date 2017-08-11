@@ -34,7 +34,11 @@
         self.itemCountLabel.text = [NSString stringWithFormat:@"%ld",assets.count];
         self.requestId = [[DFPhotoAndVideoManager manager] requestImageForAsset:assets.lastObject targetSize:self.coverImage.frame.size contentMode:PHImageContentModeAspectFill options:nil resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.coverImage.image = result;
+                if (result) {
+                    self.coverImage.image = result;
+                } else if ([[DFPhotoAndVideoManager manager].delegate respondsToSelector:@selector(placeHolderImageForEmptyAlbumCover)]) {
+                    self.coverImage.image = [[DFPhotoAndVideoManager manager].delegate placeHolderImageForEmptyAlbumCover];
+                }
             });
         }];
     }];
