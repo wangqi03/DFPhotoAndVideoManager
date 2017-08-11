@@ -45,6 +45,9 @@
     self.requestId = -1;
     self.selectTick.layer.cornerRadius = self.selectTick.frame.size.width/2;
     self.selectTick.clipsToBounds = YES;
+    
+    self.selectTick.layer.borderWidth = 1;
+    self.selectTick.layer.borderColor = [[UIColor whiteColor] CGColor];
 }
 
 - (void)setSelected:(BOOL)selected {

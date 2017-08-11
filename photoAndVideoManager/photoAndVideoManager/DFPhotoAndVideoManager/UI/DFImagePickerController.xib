@@ -25,7 +25,7 @@
                     <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
-                        <barButtonItem enabled="NO" title="完成" style="done" id="Lgg-JB-qM3">
+                        <barButtonItem enabled="NO" title="完成" id="Lgg-JB-qM3">
                             <connections>
                                 <action selector="clickedDone:" destination="-1" id="zmZ-J1-H3F"/>
                             </connections>
