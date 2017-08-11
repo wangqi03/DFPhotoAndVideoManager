@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAB411B41F3DA296004F98CC /* DFPhotoAndVideoManager+UIConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB411B31F3DA296004F98CC /* DFPhotoAndVideoManager+UIConvenience.m */; };
 		AAC481CA1F3D55C0009F6150 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481C91F3D55C0009F6150 /* main.m */; };
 		AAC481CD1F3D55C0009F6150 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481CC1F3D55C0009F6150 /* AppDelegate.m */; };
 		AAC481D01F3D55C0009F6150 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481CF1F3D55C0009F6150 /* ViewController.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AAB411B21F3DA295004F98CC /* DFPhotoAndVideoManager+UIConvenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DFPhotoAndVideoManager+UIConvenience.h"; sourceTree = "<group>"; };
+		AAB411B31F3DA296004F98CC /* DFPhotoAndVideoManager+UIConvenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DFPhotoAndVideoManager+UIConvenience.m"; sourceTree = "<group>"; };
 		AAC481C51F3D55C0009F6150 /* photoAndVideoManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photoAndVideoManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC481C91F3D55C0009F6150 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AAC481CB1F3D55C0009F6150 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 			children = (
 				AAC481EE1F3D55D7009F6150 /* DFPhotoAndVideoManager.h */,
 				AAC481EF1F3D55D7009F6150 /* DFPhotoAndVideoManager.m */,
+				AAB411B21F3DA295004F98CC /* DFPhotoAndVideoManager+UIConvenience.h */,
+				AAB411B31F3DA296004F98CC /* DFPhotoAndVideoManager+UIConvenience.m */,
 				AAC481F01F3D55D7009F6150 /* UI */,
 			);
 			path = DFPhotoAndVideoManager;
@@ -281,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB411B41F3DA296004F98CC /* DFPhotoAndVideoManager+UIConvenience.m in Sources */,
 				AAC482071F3D55D7009F6150 /* DFImagePickerCell.m in Sources */,
 				AAC482091F3D55D7009F6150 /* DFImagePickerController.m in Sources */,
 				AAC482011F3D55D7009F6150 /* DFPhotoAndVideoManager.m in Sources */,
@@ -492,6 +498,7 @@
 				AAC481E91F3D55C0009F6150 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAC481EA1F3D55C0009F6150 /* Build configuration list for PBXNativeTarget "photoAndVideoManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +507,7 @@
 				AAC481EC1F3D55C0009F6150 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

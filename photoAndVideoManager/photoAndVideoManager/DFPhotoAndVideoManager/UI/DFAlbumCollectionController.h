@@ -12,5 +12,6 @@
 @interface DFAlbumCollectionController : UICollectionViewController
 
 @property (nonatomic,strong) NSMutableArray<PHAssetCollection*>* albums;
+@property (nonatomic) DFPAVMediaType type;
 
 @end

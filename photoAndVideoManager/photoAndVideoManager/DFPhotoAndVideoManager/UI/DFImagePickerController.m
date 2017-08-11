@@ -8,7 +8,7 @@
 
 #import "DFImagePickerController.h"
 #import "DFImagePickerCell.h"
-#import "DFPhotoAndVideoManager.h"
+#import "DFPhotoAndVideoManager+UIConvenience.h"
 #import "UICollectionViewController+DFPicker.h"
 
 #define SPACING 3

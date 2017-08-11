@@ -14,28 +14,36 @@
 
 @optional
 - (void)photoAndVideoManagerDidFailAccessingUserAlbum;
-- (UIImage*_Nonnull)placeHolderImageForEmptyAlbumCover;
-- (void)imagePickerDidDismissWithAssets:(NSArray<PHAsset*>*)assets;
 
 @end
+
+//********** enum
+typedef enum {
+    DFPAVMediaTypeAll=0,
+    DFPAVMediaTypeImage=1,
+    DFPAVMediaTypeVideo=2
+} DFPAVMediaType;
 
 //********** manager
 @interface DFPhotoAndVideoManager : NSObject
 
-@property (nonatomic,weak) _Nullable id <DFPhotoAndVideoManagerDelegate> delegate;
+//basis
 + (instancetype _Nonnull)manager;
+@property (nonatomic,weak) _Nullable id <DFPhotoAndVideoManagerDelegate> delegate;
 
-//albums
+//albums list
 - (void)fetchAllAlbumsWithCompletion:(void (^)(NSArray<PHAssetCollection*>*))completion;
-- (void)fetchItemsFromAlbum:( PHAssetCollection* _Nonnull )collection withCompletion:(void (^)(NSArray<PHAsset*>*))completion;
 
-//request thumb for assets
+//items list in album
+- (void)fetchAllItemsFromAlbum:( PHAssetCollection* _Nonnull )collection withCompletion:(void (^)(NSArray<PHAsset*>*))completion;
+- (void)fetchAllItemsOfType:(DFPAVMediaType)type fromAlbum:( PHAssetCollection* _Nonnull )collection withCompletion:(void (^)(NSArray<PHAsset*>*))completion;
+
+//request thumb for item
 - (PHImageRequestID)requestImageForAsset:(PHAsset *)asset targetSize:(CGSize)targetSize contentMode:(PHImageContentMode)contentMode options:(nullable PHImageRequestOptions *)options resultHandler:(void (^)(UIImage *__nullable result, NSDictionary *__nullable info))resultHandler;
 - (void)cancelImageRequest:(PHImageRequestID)requestId;
 
-//convenience ui components
-- (void)embedImagePickerInNavigationController:(UINavigationController* _Nonnull)navigationController;
-- (void)embedImagePickerInNavigationController:(UINavigationController* _Nonnull)navigationController defaultAlbumSelectionBlock:(BOOL (^)(PHAssetCollection*))selectionBlock;
-- (void)imagePickerDidDismissWithAssets:(NSArray<PHAsset*>*)assets;
+//request image
+
+//request video
 
 @end

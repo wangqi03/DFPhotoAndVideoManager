@@ -44,7 +44,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     vc2.title = album.localizedTitle;
     
-    [[DFPhotoAndVideoManager manager] fetchItemsFromAlbum:album withCompletion:^(NSArray<PHAsset *> *items) {
+    [[DFPhotoAndVideoManager manager] fetchAllItemsOfType:self.type fromAlbum:album withCompletion:^(NSArray<PHAsset *> *items) {
         vc2.items = [items mutableCopy];
     }];
     

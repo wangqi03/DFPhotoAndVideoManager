@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "DFPhotoAndVideoManager.h"
+#import "DFPhotoAndVideoManager+UIConvenience.h"
 
 @interface ViewController ()<DFPhotoAndVideoManagerDelegate>
 
@@ -20,7 +20,7 @@
 - (IBAction)showImagePicker:(id)sender {
     [DFPhotoAndVideoManager manager].delegate = self;
     UINavigationController* navi = [[UINavigationController alloc] init];
-    [[DFPhotoAndVideoManager manager] embedImagePickerInNavigationController:navi];
+    [[DFPhotoAndVideoManager manager] embedImagePickerOfType:DFPAVMediaTypeImage inNavigationController:navi];
     [self presentViewController:navi animated:YES completion:nil];
 }
 

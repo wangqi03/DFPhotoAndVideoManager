@@ -41,12 +41,40 @@
     }];
 }
 
-- (void)fetchItemsFromAlbum:( PHAssetCollection* _Nonnull )collection withCompletion:(void (^)(NSArray<PHAsset*>*))completion {
+#pragma mark -
+- (void)fetchAllItemsFromAlbum:( PHAssetCollection* _Nonnull )collection withCompletion:(void (^)(NSArray<PHAsset*>*))completion {
+    [self __fetchAllVideosFromAlbum:collection withOption:nil withCompletion:completion];
+}
+
+- (void)fetchAllItemsOfType:(DFPAVMediaType)type fromAlbum:(PHAssetCollection *)collection withCompletion:(void (^)(NSArray<PHAsset *> *))completion {
+    PHFetchOptions* option = nil;
+    switch (type) {
+        case DFPAVMediaTypeImage:
+        {
+            option = [[PHFetchOptions alloc] init];
+            option.includeAssetSourceTypes = PHAssetMediaTypeImage;
+        }
+            break;
+        case DFPAVMediaTypeVideo:
+        {
+            option = [[PHFetchOptions alloc] init];
+            option.includeAssetSourceTypes = PHAssetMediaTypeVideo;
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self __fetchAllVideosFromAlbum:collection withOption:option withCompletion:completion];
+}
+
+- (void)__fetchAllVideosFromAlbum:(PHAssetCollection *)collection withOption:(PHFetchOptions*)option withCompletion:(void (^)(NSArray<PHAsset *> *))completion {
     [self guaranteeAuthBeforeDoing:^{
         
         NSMutableArray<PHAsset*>* photos = [[NSMutableArray alloc] init];
         
-        PHFetchResult<PHAsset*> *result = [PHAsset fetchAssetsInAssetCollection:collection options:nil];
+        PHFetchResult<PHAsset*> *result = [PHAsset fetchAssetsInAssetCollection:collection options:option];
         [result enumerateObjectsUsingBlock:^(PHAsset * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [photos addObject:obj];
         }];
@@ -55,6 +83,7 @@
     }];
 }
 
+#pragma mark -
 - (PHImageRequestID)requestImageForAsset:(PHAsset *)asset targetSize:(CGSize)targetSize contentMode:(PHImageContentMode)contentMode options:(PHImageRequestOptions *)options resultHandler:(void (^)(UIImage * _Nullable, NSDictionary * _Nullable))resultHandler {
     if (!asset) {
         resultHandler(nil,nil);
@@ -133,50 +162,6 @@
 
 - (void)photoLibraryDidChange:(PHChange *)changeInstance {
     // TODO: tbc...handler library change here
-}
-
-#pragma mark - uiassist
-- (void)embedImagePickerInNavigationController:(UINavigationController *)navigationController {
-    [self embedImagePickerInNavigationController:navigationController defaultAlbumSelectionBlock:^BOOL (PHAssetCollection *album) {
-        if ([album.localizedTitle isEqualToString:@"相机胶卷"]||[album.localizedTitle isEqualToString:@"Camera Roll"]) {
-            return YES;
-        }
-        return NO;
-    }];
-}
-
-- (void)embedImagePickerInNavigationController:(UINavigationController *)navigationController defaultAlbumSelectionBlock:(BOOL (^)(PHAssetCollection *))selectionBlock {
-    DFAlbumCollectionController* vc1 = [[DFAlbumCollectionController alloc] initWithNibName:@"DFAlbumCollectionController" bundle:nil];
-    
-    DFImagePickerController* vc2 = [[DFImagePickerController alloc] initWithNibName:@"DFImagePickerController" bundle:nil];
-    
-    [self fetchAllAlbumsWithCompletion:^(NSArray<PHAssetCollection *> *albums) {
-        vc1.albums = [albums mutableCopy];
-        PHAssetCollection* selected = nil;
-        for (PHAssetCollection* collection in vc1.albums) {
-            if (selectionBlock(collection)) {
-                selected = collection;
-                break;
-            }
-        }
-        
-        if (!selected) {
-            selected = albums.lastObject;
-        }
-        vc2.title = selected.localizedTitle;
-        [self fetchItemsFromAlbum:selected withCompletion:^(NSArray<PHAsset *> *items) {
-            vc2.items = [items mutableCopy];
-        }];
-    }];
-    
-    navigationController.viewControllers = @[vc1,vc2];
-    navigationController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:navigationController action:@selector(dismissViewControllerAnimated: completion:)];
-}
-
-- (void)imagePickerDidDismissWithAssets:(NSArray<PHAsset *> *)assets {
-    if ([self.delegate respondsToSelector:@selector(imagePickerDidDismissWithAssets:)]) {
-        [self.delegate imagePickerDidDismissWithAssets:assets];
-    }
 }
 
 @end

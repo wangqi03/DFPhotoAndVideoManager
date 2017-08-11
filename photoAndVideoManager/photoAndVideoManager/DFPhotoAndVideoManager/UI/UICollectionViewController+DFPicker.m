@@ -7,6 +7,7 @@
 //
 
 #import "UICollectionViewController+DFPicker.h"
+#import "DFPhotoAndVideoManager+UIConvenience.h"
 
 @implementation UIViewController (DFPicker)
 
@@ -17,6 +18,7 @@
 }
 
 - (void)dismiss {
+    [[DFPhotoAndVideoManager manager] imagePickerDidDismissWithAssets:nil];
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
