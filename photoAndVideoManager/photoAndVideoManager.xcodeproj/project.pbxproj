@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAC481CA1F3D55C0009F6150 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481C91F3D55C0009F6150 /* main.m */; };
+		AAC481CD1F3D55C0009F6150 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481CC1F3D55C0009F6150 /* AppDelegate.m */; };
+		AAC481D01F3D55C0009F6150 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481CF1F3D55C0009F6150 /* ViewController.m */; };
+		AAC481D31F3D55C0009F6150 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC481D11F3D55C0009F6150 /* Main.storyboard */; };
+		AAC481D51F3D55C0009F6150 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAC481D41F3D55C0009F6150 /* Assets.xcassets */; };
+		AAC481D81F3D55C0009F6150 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC481D61F3D55C0009F6150 /* LaunchScreen.storyboard */; };
+		AAC481E31F3D55C0009F6150 /* photoAndVideoManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481E21F3D55C0009F6150 /* photoAndVideoManagerTests.m */; };
+		AAC482011F3D55D7009F6150 /* DFPhotoAndVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481EF1F3D55D7009F6150 /* DFPhotoAndVideoManager.m */; };
+		AAC482021F3D55D7009F6150 /* DFAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481F21F3D55D7009F6150 /* DFAlbumCell.m */; };
+		AAC482031F3D55D7009F6150 /* DFAlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC481F31F3D55D7009F6150 /* DFAlbumCell.xib */; };
+		AAC482041F3D55D7009F6150 /* DFAlbumCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481F51F3D55D7009F6150 /* DFAlbumCollectionController.m */; };
+		AAC482051F3D55D7009F6150 /* DFAlbumCollectionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC481F61F3D55D7009F6150 /* DFAlbumCollectionController.xib */; };
+		AAC482061F3D55D7009F6150 /* DFAlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481F81F3D55D7009F6150 /* DFAlbumListViewController.m */; };
+		AAC482071F3D55D7009F6150 /* DFImagePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481FA1F3D55D7009F6150 /* DFImagePickerCell.m */; };
+		AAC482081F3D55D7009F6150 /* DFImagePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC481FB1F3D55D7009F6150 /* DFImagePickerCell.xib */; };
+		AAC482091F3D55D7009F6150 /* DFImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481FD1F3D55D7009F6150 /* DFImagePickerController.m */; };
+		AAC4820A1F3D55D7009F6150 /* DFImagePickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC481FE1F3D55D7009F6150 /* DFImagePickerController.xib */; };
+		AAC4820B1F3D55D7009F6150 /* UICollectionViewController+DFPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC482001F3D55D7009F6150 /* UICollectionViewController+DFPicker.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAC481DF1F3D55C0009F6150 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAC481BD1F3D55C0009F6150 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAC481C41F3D55C0009F6150;
+			remoteInfo = photoAndVideoManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AAC481C51F3D55C0009F6150 /* photoAndVideoManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photoAndVideoManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC481C91F3D55C0009F6150 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AAC481CB1F3D55C0009F6150 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AAC481CC1F3D55C0009F6150 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AAC481CE1F3D55C0009F6150 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AAC481CF1F3D55C0009F6150 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AAC481D21F3D55C0009F6150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AAC481D41F3D55C0009F6150 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAC481D71F3D55C0009F6150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AAC481D91F3D55C0009F6150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAC481DE1F3D55C0009F6150 /* photoAndVideoManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = photoAndVideoManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAC481E21F3D55C0009F6150 /* photoAndVideoManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = photoAndVideoManagerTests.m; sourceTree = "<group>"; };
+		AAC481E41F3D55C0009F6150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAC481EE1F3D55D7009F6150 /* DFPhotoAndVideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPhotoAndVideoManager.h; sourceTree = "<group>"; };
+		AAC481EF1F3D55D7009F6150 /* DFPhotoAndVideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFPhotoAndVideoManager.m; sourceTree = "<group>"; };
+		AAC481F11F3D55D7009F6150 /* DFAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFAlbumCell.h; sourceTree = "<group>"; };
+		AAC481F21F3D55D7009F6150 /* DFAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFAlbumCell.m; sourceTree = "<group>"; };
+		AAC481F31F3D55D7009F6150 /* DFAlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DFAlbumCell.xib; sourceTree = "<group>"; };
+		AAC481F41F3D55D7009F6150 /* DFAlbumCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFAlbumCollectionController.h; sourceTree = "<group>"; };
+		AAC481F51F3D55D7009F6150 /* DFAlbumCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFAlbumCollectionController.m; sourceTree = "<group>"; };
+		AAC481F61F3D55D7009F6150 /* DFAlbumCollectionController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DFAlbumCollectionController.xib; sourceTree = "<group>"; };
+		AAC481F71F3D55D7009F6150 /* DFAlbumListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFAlbumListViewController.h; sourceTree = "<group>"; };
+		AAC481F81F3D55D7009F6150 /* DFAlbumListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFAlbumListViewController.m; sourceTree = "<group>"; };
+		AAC481F91F3D55D7009F6150 /* DFImagePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFImagePickerCell.h; sourceTree = "<group>"; };
+		AAC481FA1F3D55D7009F6150 /* DFImagePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFImagePickerCell.m; sourceTree = "<group>"; };
+		AAC481FB1F3D55D7009F6150 /* DFImagePickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DFImagePickerCell.xib; sourceTree = "<group>"; };
+		AAC481FC1F3D55D7009F6150 /* DFImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFImagePickerController.h; sourceTree = "<group>"; };
+		AAC481FD1F3D55D7009F6150 /* DFImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFImagePickerController.m; sourceTree = "<group>"; };
+		AAC481FE1F3D55D7009F6150 /* DFImagePickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DFImagePickerController.xib; sourceTree = "<group>"; };
+		AAC481FF1F3D55D7009F6150 /* UICollectionViewController+DFPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewController+DFPicker.h"; sourceTree = "<group>"; };
+		AAC482001F3D55D7009F6150 /* UICollectionViewController+DFPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewController+DFPicker.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAC481C21F3D55C0009F6150 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC481DB1F3D55C0009F6150 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAC481BC1F3D55C0009F6150 = {
+			isa = PBXGroup;
+			children = (
+				AAC481C71F3D55C0009F6150 /* photoAndVideoManager */,
+				AAC481E11F3D55C0009F6150 /* photoAndVideoManagerTests */,
+				AAC481C61F3D55C0009F6150 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAC481C61F3D55C0009F6150 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAC481C51F3D55C0009F6150 /* photoAndVideoManager.app */,
+				AAC481DE1F3D55C0009F6150 /* photoAndVideoManagerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAC481C71F3D55C0009F6150 /* photoAndVideoManager */ = {
+			isa = PBXGroup;
+			children = (
+				AAC481ED1F3D55D7009F6150 /* DFPhotoAndVideoManager */,
+				AAC481CB1F3D55C0009F6150 /* AppDelegate.h */,
+				AAC481CC1F3D55C0009F6150 /* AppDelegate.m */,
+				AAC481CE1F3D55C0009F6150 /* ViewController.h */,
+				AAC481CF1F3D55C0009F6150 /* ViewController.m */,
+				AAC481D11F3D55C0009F6150 /* Main.storyboard */,
+				AAC481D41F3D55C0009F6150 /* Assets.xcassets */,
+				AAC481D61F3D55C0009F6150 /* LaunchScreen.storyboard */,
+				AAC481D91F3D55C0009F6150 /* Info.plist */,
+				AAC481C81F3D55C0009F6150 /* Supporting Files */,
+			);
+			path = photoAndVideoManager;
+			sourceTree = "<group>";
+		};
+		AAC481C81F3D55C0009F6150 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAC481C91F3D55C0009F6150 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAC481E11F3D55C0009F6150 /* photoAndVideoManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				AAC481E21F3D55C0009F6150 /* photoAndVideoManagerTests.m */,
+				AAC481E41F3D55C0009F6150 /* Info.plist */,
+			);
+			path = photoAndVideoManagerTests;
+			sourceTree = "<group>";
+		};
+		AAC481ED1F3D55D7009F6150 /* DFPhotoAndVideoManager */ = {
+			isa = PBXGroup;
+			children = (
+				AAC481EE1F3D55D7009F6150 /* DFPhotoAndVideoManager.h */,
+				AAC481EF1F3D55D7009F6150 /* DFPhotoAndVideoManager.m */,
+				AAC481F01F3D55D7009F6150 /* UI */,
+			);
+			path = DFPhotoAndVideoManager;
+			sourceTree = "<group>";
+		};
+		AAC481F01F3D55D7009F6150 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AAC481F11F3D55D7009F6150 /* DFAlbumCell.h */,
+				AAC481F21F3D55D7009F6150 /* DFAlbumCell.m */,
+				AAC481F31F3D55D7009F6150 /* DFAlbumCell.xib */,
+				AAC481F41F3D55D7009F6150 /* DFAlbumCollectionController.h */,
+				AAC481F51F3D55D7009F6150 /* DFAlbumCollectionController.m */,
+				AAC481F61F3D55D7009F6150 /* DFAlbumCollectionController.xib */,
+				AAC481F71F3D55D7009F6150 /* DFAlbumListViewController.h */,
+				AAC481F81F3D55D7009F6150 /* DFAlbumListViewController.m */,
+				AAC481F91F3D55D7009F6150 /* DFImagePickerCell.h */,
+				AAC481FA1F3D55D7009F6150 /* DFImagePickerCell.m */,
+				AAC481FB1F3D55D7009F6150 /* DFImagePickerCell.xib */,
+				AAC481FC1F3D55D7009F6150 /* DFImagePickerController.h */,
+				AAC481FD1F3D55D7009F6150 /* DFImagePickerController.m */,
+				AAC481FE1F3D55D7009F6150 /* DFImagePickerController.xib */,
+				AAC481FF1F3D55D7009F6150 /* UICollectionViewController+DFPicker.h */,
+				AAC482001F3D55D7009F6150 /* UICollectionViewController+DFPicker.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAC481C41F3D55C0009F6150 /* photoAndVideoManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAC481E71F3D55C0009F6150 /* Build configuration list for PBXNativeTarget "photoAndVideoManager" */;
+			buildPhases = (
+				AAC481C11F3D55C0009F6150 /* Sources */,
+				AAC481C21F3D55C0009F6150 /* Frameworks */,
+				AAC481C31F3D55C0009F6150 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = photoAndVideoManager;
+			productName = photoAndVideoManager;
+			productReference = AAC481C51F3D55C0009F6150 /* photoAndVideoManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAC481DD1F3D55C0009F6150 /* photoAndVideoManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAC481EA1F3D55C0009F6150 /* Build configuration list for PBXNativeTarget "photoAndVideoManagerTests" */;
+			buildPhases = (
+				AAC481DA1F3D55C0009F6150 /* Sources */,
+				AAC481DB1F3D55C0009F6150 /* Frameworks */,
+				AAC481DC1F3D55C0009F6150 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAC481E01F3D55C0009F6150 /* PBXTargetDependency */,
+			);
+			name = photoAndVideoManagerTests;
+			productName = photoAndVideoManagerTests;
+			productReference = AAC481DE1F3D55C0009F6150 /* photoAndVideoManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAC481BD1F3D55C0009F6150 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = wang;
+				TargetAttributes = {
+					AAC481C41F3D55C0009F6150 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = W4M79BF28V;
+						ProvisioningStyle = Automatic;
+					};
+					AAC481DD1F3D55C0009F6150 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = W4M79BF28V;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AAC481C41F3D55C0009F6150;
+					};
+				};
+			};
+			buildConfigurationList = AAC481C01F3D55C0009F6150 /* Build configuration list for PBXProject "photoAndVideoManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAC481BC1F3D55C0009F6150;
+			productRefGroup = AAC481C61F3D55C0009F6150 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAC481C41F3D55C0009F6150 /* photoAndVideoManager */,
+				AAC481DD1F3D55C0009F6150 /* photoAndVideoManagerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAC481C31F3D55C0009F6150 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC481D81F3D55C0009F6150 /* LaunchScreen.storyboard in Resources */,
+				AAC482081F3D55D7009F6150 /* DFImagePickerCell.xib in Resources */,
+				AAC481D51F3D55C0009F6150 /* Assets.xcassets in Resources */,
+				AAC482051F3D55D7009F6150 /* DFAlbumCollectionController.xib in Resources */,
+				AAC481D31F3D55C0009F6150 /* Main.storyboard in Resources */,
+				AAC482031F3D55D7009F6150 /* DFAlbumCell.xib in Resources */,
+				AAC4820A1F3D55D7009F6150 /* DFImagePickerController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC481DC1F3D55C0009F6150 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAC481C11F3D55C0009F6150 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC482061F3D55D7009F6150 /* DFAlbumListViewController.m in Sources */,
+				AAC482071F3D55D7009F6150 /* DFImagePickerCell.m in Sources */,
+				AAC482091F3D55D7009F6150 /* DFImagePickerController.m in Sources */,
+				AAC482011F3D55D7009F6150 /* DFPhotoAndVideoManager.m in Sources */,
+				AAC4820B1F3D55D7009F6150 /* UICollectionViewController+DFPicker.m in Sources */,
+				AAC481D01F3D55C0009F6150 /* ViewController.m in Sources */,
+				AAC481CD1F3D55C0009F6150 /* AppDelegate.m in Sources */,
+				AAC482041F3D55D7009F6150 /* DFAlbumCollectionController.m in Sources */,
+				AAC481CA1F3D55C0009F6150 /* main.m in Sources */,
+				AAC482021F3D55D7009F6150 /* DFAlbumCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC481DA1F3D55C0009F6150 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAC481E31F3D55C0009F6150 /* photoAndVideoManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAC481E01F3D55C0009F6150 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAC481C41F3D55C0009F6150 /* photoAndVideoManager */;
+			targetProxy = AAC481DF1F3D55C0009F6150 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AAC481D11F3D55C0009F6150 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAC481D21F3D55C0009F6150 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AAC481D61F3D55C0009F6150 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAC481D71F3D55C0009F6150 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AAC481E51F3D55C0009F6150 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAC481E61F3D55C0009F6150 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAC481E81F3D55C0009F6150 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = W4M79BF28V;
+				INFOPLIST_FILE = photoAndVideoManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wang.photoAndVideoManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AAC481E91F3D55C0009F6150 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = W4M79BF28V;
+				INFOPLIST_FILE = photoAndVideoManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wang.photoAndVideoManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AAC481EB1F3D55C0009F6150 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = W4M79BF28V;
+				INFOPLIST_FILE = photoAndVideoManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wang.photoAndVideoManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/photoAndVideoManager.app/photoAndVideoManager";
+			};
+			name = Debug;
+		};
+		AAC481EC1F3D55C0009F6150 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = W4M79BF28V;
+				INFOPLIST_FILE = photoAndVideoManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wang.photoAndVideoManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/photoAndVideoManager.app/photoAndVideoManager";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAC481C01F3D55C0009F6150 /* Build configuration list for PBXProject "photoAndVideoManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC481E51F3D55C0009F6150 /* Debug */,
+				AAC481E61F3D55C0009F6150 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAC481E71F3D55C0009F6150 /* Build configuration list for PBXNativeTarget "photoAndVideoManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC481E81F3D55C0009F6150 /* Debug */,
+				AAC481E91F3D55C0009F6150 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AAC481EA1F3D55C0009F6150 /* Build configuration list for PBXNativeTarget "photoAndVideoManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAC481EB1F3D55C0009F6150 /* Debug */,
+				AAC481EC1F3D55C0009F6150 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAC481BD1F3D55C0009F6150 /* Project object */;
+}
