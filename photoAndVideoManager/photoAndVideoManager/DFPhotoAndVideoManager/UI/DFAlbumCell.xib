@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="136" height="176"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ne9-Vv-UUd">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ne9-Vv-UUd">
                         <rect key="frame" x="8" y="7" width="120" height="120"/>
                         <color key="backgroundColor" white="0.89444754464285714" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

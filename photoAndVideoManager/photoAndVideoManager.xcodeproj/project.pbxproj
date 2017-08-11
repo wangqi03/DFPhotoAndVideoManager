@@ -19,7 +19,6 @@
 		AAC482031F3D55D7009F6150 /* DFAlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC481F31F3D55D7009F6150 /* DFAlbumCell.xib */; };
 		AAC482041F3D55D7009F6150 /* DFAlbumCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481F51F3D55D7009F6150 /* DFAlbumCollectionController.m */; };
 		AAC482051F3D55D7009F6150 /* DFAlbumCollectionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC481F61F3D55D7009F6150 /* DFAlbumCollectionController.xib */; };
-		AAC482061F3D55D7009F6150 /* DFAlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481F81F3D55D7009F6150 /* DFAlbumListViewController.m */; };
 		AAC482071F3D55D7009F6150 /* DFImagePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481FA1F3D55D7009F6150 /* DFImagePickerCell.m */; };
 		AAC482081F3D55D7009F6150 /* DFImagePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC481FB1F3D55D7009F6150 /* DFImagePickerCell.xib */; };
 		AAC482091F3D55D7009F6150 /* DFImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481FD1F3D55D7009F6150 /* DFImagePickerController.m */; };
@@ -60,8 +59,6 @@
 		AAC481F41F3D55D7009F6150 /* DFAlbumCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFAlbumCollectionController.h; sourceTree = "<group>"; };
 		AAC481F51F3D55D7009F6150 /* DFAlbumCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFAlbumCollectionController.m; sourceTree = "<group>"; };
 		AAC481F61F3D55D7009F6150 /* DFAlbumCollectionController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DFAlbumCollectionController.xib; sourceTree = "<group>"; };
-		AAC481F71F3D55D7009F6150 /* DFAlbumListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFAlbumListViewController.h; sourceTree = "<group>"; };
-		AAC481F81F3D55D7009F6150 /* DFAlbumListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFAlbumListViewController.m; sourceTree = "<group>"; };
 		AAC481F91F3D55D7009F6150 /* DFImagePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFImagePickerCell.h; sourceTree = "<group>"; };
 		AAC481FA1F3D55D7009F6150 /* DFImagePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFImagePickerCell.m; sourceTree = "<group>"; };
 		AAC481FB1F3D55D7009F6150 /* DFImagePickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DFImagePickerCell.xib; sourceTree = "<group>"; };
@@ -163,8 +160,6 @@
 				AAC481F41F3D55D7009F6150 /* DFAlbumCollectionController.h */,
 				AAC481F51F3D55D7009F6150 /* DFAlbumCollectionController.m */,
 				AAC481F61F3D55D7009F6150 /* DFAlbumCollectionController.xib */,
-				AAC481F71F3D55D7009F6150 /* DFAlbumListViewController.h */,
-				AAC481F81F3D55D7009F6150 /* DFAlbumListViewController.m */,
 				AAC481F91F3D55D7009F6150 /* DFImagePickerCell.h */,
 				AAC481FA1F3D55D7009F6150 /* DFImagePickerCell.m */,
 				AAC481FB1F3D55D7009F6150 /* DFImagePickerCell.xib */,
@@ -286,7 +281,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAC482061F3D55D7009F6150 /* DFAlbumListViewController.m in Sources */,
 				AAC482071F3D55D7009F6150 /* DFImagePickerCell.m in Sources */,
 				AAC482091F3D55D7009F6150 /* DFImagePickerController.m in Sources */,
 				AAC482011F3D55D7009F6150 /* DFPhotoAndVideoManager.m in Sources */,
