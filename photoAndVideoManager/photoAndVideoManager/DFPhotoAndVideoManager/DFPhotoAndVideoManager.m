@@ -1,7 +1,9 @@
 //
 //  DFPhotoAndVideoManager.m
+//  photoAndVideoManager
 //
-//  Created by wanghaojiao on 2017/8/8.
+//  Created by wanghaojiao on 2017/8/11.
+//  Copyright © 2017年 wang. All rights reserved.
 //
 
 #import "DFPhotoAndVideoManager.h"

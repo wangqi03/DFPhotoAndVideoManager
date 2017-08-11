@@ -22,13 +22,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="178" height="159"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="df_selection_tick.png" translatesAutoresizingMaskIntoConstraints="NO" id="ucW-ii-J0B">
+                        <rect key="frame" x="156" y="137" width="18" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
                 </subviews>
             </view>
             <size key="customSize" width="178" height="159"/>
             <connections>
                 <outlet property="myImage" destination="ZVs-Kc-GPn" id="PuT-Jp-yun"/>
+                <outlet property="selectTick" destination="ucW-ii-J0B" id="1VF-ZK-cyq"/>
             </connections>
             <point key="canvasLocation" x="109" y="108.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="df_selection_tick.png" width="60" height="60"/>
+    </resources>
 </document>

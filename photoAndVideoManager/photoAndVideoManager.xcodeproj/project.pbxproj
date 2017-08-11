@@ -25,6 +25,7 @@
 		AAC482091F3D55D7009F6150 /* DFImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC481FD1F3D55D7009F6150 /* DFImagePickerController.m */; };
 		AAC4820A1F3D55D7009F6150 /* DFImagePickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC481FE1F3D55D7009F6150 /* DFImagePickerController.xib */; };
 		AAC4820B1F3D55D7009F6150 /* UICollectionViewController+DFPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC482001F3D55D7009F6150 /* UICollectionViewController+DFPicker.m */; };
+		AAC4820D1F3D626F009F6150 /* df_selection_tick.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC4820C1F3D626F009F6150 /* df_selection_tick.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		AAC481FE1F3D55D7009F6150 /* DFImagePickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DFImagePickerController.xib; sourceTree = "<group>"; };
 		AAC481FF1F3D55D7009F6150 /* UICollectionViewController+DFPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewController+DFPicker.h"; sourceTree = "<group>"; };
 		AAC482001F3D55D7009F6150 /* UICollectionViewController+DFPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewController+DFPicker.m"; sourceTree = "<group>"; };
+		AAC4820C1F3D626F009F6150 /* df_selection_tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = df_selection_tick.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		AAC481F01F3D55D7009F6150 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				AAC4820C1F3D626F009F6150 /* df_selection_tick.png */,
 				AAC481F11F3D55D7009F6150 /* DFAlbumCell.h */,
 				AAC481F21F3D55D7009F6150 /* DFAlbumCell.m */,
 				AAC481F31F3D55D7009F6150 /* DFAlbumCell.xib */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC481D81F3D55C0009F6150 /* LaunchScreen.storyboard in Resources */,
+				AAC4820D1F3D626F009F6150 /* df_selection_tick.png in Resources */,
 				AAC482081F3D55D7009F6150 /* DFImagePickerCell.xib in Resources */,
 				AAC481D51F3D55C0009F6150 /* Assets.xcassets in Resources */,
 				AAC482051F3D55D7009F6150 /* DFAlbumCollectionController.xib in Resources */,
@@ -432,7 +436,7 @@
 				DEVELOPMENT_TEAM = W4M79BF28V;
 				INFOPLIST_FILE = photoAndVideoManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wang.photoAndVideoManager2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wang.photoAndVideoManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -444,7 +448,7 @@
 				DEVELOPMENT_TEAM = W4M79BF28V;
 				INFOPLIST_FILE = photoAndVideoManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.wang.photoAndVideoManager2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wang.photoAndVideoManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

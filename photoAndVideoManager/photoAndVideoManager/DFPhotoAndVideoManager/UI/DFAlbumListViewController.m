@@ -1,7 +1,9 @@
 //
 //  DFAlbumListViewController.m
+//  photoAndVideoManager
 //
-//  Created by WANG Haojiao on 2017/8/8.
+//  Created by wanghaojiao on 2017/8/11.
+//  Copyright © 2017年 wang. All rights reserved.
 //
 
 #import "DFAlbumListViewController.h"

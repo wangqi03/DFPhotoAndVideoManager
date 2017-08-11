@@ -1,7 +1,9 @@
 //
-//  HCYImagePickerCell.m
+//  DFImagePickerCell.m
+//  photoAndVideoManager
 //
-//  Created by wanghaojiao on 2017/8/8.
+//  Created by wanghaojiao on 2017/8/11.
+//  Copyright © 2017年 wang. All rights reserved.
 //
 
 #import "DFImagePickerCell.h"
@@ -9,6 +11,7 @@
 
 @interface DFImagePickerCell()
 @property (nonatomic,assign) PHImageRequestID requestId;
+@property (weak, nonatomic) IBOutlet UIImageView *selectTick;
 @end
 
 @implementation DFImagePickerCell
@@ -40,6 +43,14 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.requestId = -1;
+    self.selectTick.layer.cornerRadius = self.selectTick.frame.size.width/2;
+    self.selectTick.clipsToBounds = YES;
+}
+
+- (void)setSelected:(BOOL)selected {
+    [super setSelected:selected];
+    
+    self.selectTick.hidden = !selected;
 }
 
 @end

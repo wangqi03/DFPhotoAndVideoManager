@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/*.{h,m}", "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/*.{h,m}"
+  s.source_files  = "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/*.{h,m}", "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/*.{h,m}", "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/df_selection_tick.png"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
