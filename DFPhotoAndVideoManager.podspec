@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DFPhotoAndVideoManager"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Helps you to retrieve photo and videos from iOS photo album"
 
   # This description is used to generate tags and improve search results.
@@ -91,7 +91,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/*.{h,m}", "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/*.{h,m}", "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/df_selection_tick.png"
+  s.source_files  = "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/*"
+	#.{h,m}", "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/*.{h,m}", "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/df_selection_tick.png"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -117,7 +118,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
+  s.framework  = "Photos.framework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
