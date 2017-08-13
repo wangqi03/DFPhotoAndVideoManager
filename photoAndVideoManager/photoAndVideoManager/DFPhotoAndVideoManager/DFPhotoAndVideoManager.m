@@ -52,13 +52,14 @@
         case DFPAVMediaTypeImage:
         {
             option = [[PHFetchOptions alloc] init];
-            option.includeAssetSourceTypes = PHAssetMediaTypeImage;
+            option.predicate = [NSPredicate predicateWithFormat:@"mediaType = %d",PHAssetMediaTypeImage];
+            //NSPredicate(format:"mediaType = %d", PHAssetMediaType.video.rawValue);
         }
             break;
         case DFPAVMediaTypeVideo:
         {
             option = [[PHFetchOptions alloc] init];
-            option.includeAssetSourceTypes = PHAssetMediaTypeVideo;
+            option.predicate = [NSPredicate predicateWithFormat:@"mediaType = %d",PHAssetMediaTypeVideo];
         }
             break;
             

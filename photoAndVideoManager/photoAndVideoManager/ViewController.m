@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "DFPhotoAndVideoManager+UIConvenience.h"
 
-@interface ViewController ()<DFPhotoAndVideoManagerDelegate>
+@interface ViewController ()<DFPhotoAndVideoManagerDelegate,DFPhotoAndVideoManagerUIDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @end
@@ -19,11 +19,11 @@
 
 - (IBAction)showImagePicker:(id)sender {
     [DFPhotoAndVideoManager manager].delegate = self;
+    [DFPhotoAndVideoManager manager].uiDelegate = self;
     UINavigationController* navi = [[UINavigationController alloc] init];
     [[DFPhotoAndVideoManager manager] embedImagePickerOfType:DFPAVMediaTypeImage inNavigationController:navi];
     [self presentViewController:navi animated:YES completion:nil];
 }
-
 
 #pragma mark - DFPhotoAndVideoManagerDelegate
 - (void)photoAndVideoManagerDidFailAccessingUserAlbum {
