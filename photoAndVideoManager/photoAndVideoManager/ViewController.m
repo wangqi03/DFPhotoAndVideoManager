@@ -21,7 +21,7 @@
     [DFPhotoAndVideoManager manager].delegate = self;
     [DFPhotoAndVideoManager manager].uiDelegate = self;
     UINavigationController* navi = [[UINavigationController alloc] init];
-    [[DFPhotoAndVideoManager manager] embedImagePickerOfType:DFPAVMediaTypeImage inNavigationController:navi];
+    [[DFPhotoAndVideoManager manager] embedImagePickerOfType:DFPAVMediaTypeAll inNavigationController:navi];
     [self presentViewController:navi animated:YES completion:nil];
 }
 

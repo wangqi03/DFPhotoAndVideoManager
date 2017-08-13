@@ -34,7 +34,7 @@
     [[DFPhotoAndVideoManager manager] cancelImageRequest:self.requestId];
     [[DFPhotoAndVideoManager manager] fetchAllItemsFromAlbum:_album withCompletion:^(NSArray<PHAsset *> *assets) {
         self.itemCountLabel.text = [NSString stringWithFormat:@"%ld",assets.count];
-        self.requestId = [[DFPhotoAndVideoManager manager] requestImageForAsset:assets.lastObject targetSize:CGSizeMake(self.coverImage.frame.size.width*2, self.coverImage.frame.size.height*2) contentMode:PHImageContentModeAspectFill options:nil resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+        self.requestId = [[DFPhotoAndVideoManager manager] requestImageForAsset:assets.lastObject targetSize:CGSizeMake(self.coverImage.frame.size.width*2, self.coverImage.frame.size.height*2) resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (result) {
                     self.coverImage.image = result;

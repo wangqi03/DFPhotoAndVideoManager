@@ -29,7 +29,7 @@
         PHImageRequestOptions* options = [[PHImageRequestOptions alloc] init];
         options.resizeMode = PHImageRequestOptionsResizeModeFast;
         
-        self.requestId = [[DFPhotoAndVideoManager manager] requestImageForAsset:_asset targetSize:CGSizeMake(self.frame.size.width*2, self.frame.size.height*2) contentMode:PHImageContentModeAspectFill options:nil resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+        self.requestId = [[DFPhotoAndVideoManager manager] requestImageForAsset:_asset targetSize:CGSizeMake(self.frame.size.width*2, self.frame.size.height*2) resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.myImage.image = result;
             });

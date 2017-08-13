@@ -85,7 +85,11 @@
 }
 
 #pragma mark -
-- (PHImageRequestID)requestImageForAsset:(PHAsset *)asset targetSize:(CGSize)targetSize contentMode:(PHImageContentMode)contentMode options:(PHImageRequestOptions *)options resultHandler:(void (^)(UIImage * _Nullable, NSDictionary * _Nullable))resultHandler {
+- (PHImageRequestID)requestImageForAsset:(PHAsset *)asset targetSize:(CGSize)targetSize resultHandler:(void (^)(UIImage * _Nullable, NSDictionary * _Nullable))resultHandler {
+    return [self __requestImageForAsset:asset targetSize:targetSize contentMode:PHImageContentModeAspectFill options:nil resultHandler:resultHandler];
+}
+
+- (PHImageRequestID)__requestImageForAsset:(PHAsset *)asset targetSize:(CGSize)targetSize contentMode:(PHImageContentMode)contentMode options:(PHImageRequestOptions *)options resultHandler:(void (^)(UIImage * _Nullable, NSDictionary * _Nullable))resultHandler {
     if (!asset) {
         resultHandler(nil,nil);
         return 0;
