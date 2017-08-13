@@ -91,11 +91,12 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/*"
-	#.{h,m}", "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/*.{h,m}", "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/df_selection_tick.png"
+  s.source_files  = "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/*", "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/*"
+
+#"photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/*.{h,m}", "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/*.{h,m}", "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/df_selection_tick.png"
   #s.exclude_files = "Classes/Exclude"
 
-  # s.public_header_files = "Classes/**/*.h"
+  #s.public_header_files = "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/*.{h,m}"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -118,7 +119,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.framework  = "Photos.framework"
+  s.framework  = "Photos"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
