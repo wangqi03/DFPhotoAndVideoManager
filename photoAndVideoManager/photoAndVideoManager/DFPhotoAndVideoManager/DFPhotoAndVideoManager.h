@@ -40,10 +40,14 @@ typedef enum {
 
 //request thumb/image for item
 - (PHImageRequestID)requestImageForAsset:(PHAsset *)asset targetSize:(CGSize)targetSize resultHandler:(void (^)(UIImage *__nullable result, NSDictionary *__nullable info))resultHandler;
-- (void)cancelImageRequest:(PHImageRequestID)requestId;
 
 //request image
+- (PHImageRequestID)requestImageDataForAsset:(PHAsset *)asset resultHandler:(void(^)(NSData *__nullable imageData, NSString *__nullable dataUTI, UIImageOrientation orientation, NSDictionary *__nullable info))resultHandler;
 
 //request video
+- (PHImageRequestID)requestAVAssetForVideo:(PHAsset *)asset resultHandler:(void (^)(AVURLAsset *__nullable asset, AVAudioMix *__nullable audioMix, NSDictionary *__nullable info))resultHandler;
+
+//cancel request
+- (void)cancelImageRequest:(PHImageRequestID)requestId;
 
 @end

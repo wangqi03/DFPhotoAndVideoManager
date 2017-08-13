@@ -35,7 +35,25 @@
 }
 
 - (void)imagePickerDidDismissWithAssets:(NSArray<PHAsset*>*)assets {
-    self.resultLabel.text = [NSString stringWithFormat:@"%d assets selected",assets.count];
+    self.resultLabel.text = [NSString stringWithFormat:@"%lu assets selected",(unsigned long)assets.count];
+    
+    PHAsset* asset = [assets lastObject];
+    if (asset.mediaType == PHAssetMediaTypeImage) {
+        [[DFPhotoAndVideoManager manager] requestImageDataForAsset:asset resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
+            
+            NSLog(@"%@",info);
+            
+        }];
+    } else if (asset.mediaType == PHAssetMediaTypeVideo) {
+        
+        [[DFPhotoAndVideoManager manager] requestAVAssetForVideo:asset resultHandler:^(AVURLAsset * _Nullable asset, AVAudioMix * _Nullable audioMix, NSDictionary * _Nullable info) {
+            
+        }];
+    }
+}
+
+- (void)putFileToAppTempFolderAtPath:(NSString*)originalPath {
+    
 }
 
 @end

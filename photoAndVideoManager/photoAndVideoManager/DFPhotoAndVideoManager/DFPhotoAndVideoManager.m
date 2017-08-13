@@ -102,6 +102,27 @@
     [[PHImageManager defaultManager] cancelImageRequest:requestId];
 }
 
+#pragma mark - 
+- (PHImageRequestID)requestImageDataForAsset:(PHAsset *)asset resultHandler:(void (^)(NSData * _Nullable, NSString * _Nullable, UIImageOrientation, NSDictionary * _Nullable))resultHandler {
+    if (!asset) {
+        resultHandler(nil,nil,UIImageOrientationUp,nil);
+        return 0;
+    }
+    
+    return [[PHImageManager defaultManager] requestImageDataForAsset:asset options:nil resultHandler:resultHandler];
+}
+
+- (PHImageRequestID)requestAVAssetForVideo:(PHAsset *)asset resultHandler:(void (^)(AVURLAsset * _Nullable, AVAudioMix * _Nullable, NSDictionary * _Nullable))resultHandler {
+    if (!asset) {
+        resultHandler(nil,nil,nil);
+        return 0;
+    }
+    
+    return [[PHImageManager defaultManager] requestAVAssetForVideo:asset options:nil resultHandler:^(AVAsset * _Nullable asset, AVAudioMix * _Nullable audioMix, NSDictionary * _Nullable info) {
+        resultHandler(asset,audioMix,info);
+    }];
+}
+
 #pragma mark - initialize and auth
 + (instancetype)manager {
     static DFPhotoAndVideoManager *sharedInstance = nil;
