@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DFPhotoAndVideoManager"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "Helps you to retrieve photo and videos from iOS photo album"
 
   # This description is used to generate tags and improve search results.
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/*", "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/*"
+  s.source_files  = "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/*", "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/*.{h,m}"
 
 #"photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/*.{h,m}", "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/*.{h,m}", "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/df_selection_tick.png"
   #s.exclude_files = "Classes/Exclude"
@@ -108,7 +108,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+  s.resources = "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/*.{xib}"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
