@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DFPhotoAndVideoManager"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "Helps you to retrieve photo and videos from iOS photo album"
 
   # This description is used to generate tags and improve search results.
@@ -108,7 +108,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  s.resources = "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/*.{xib}"
+  s.resources = "photoAndVideoManager/photoAndVideoManager/DFPhotoAndVideoManager/UI/*.{xib,png}"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
