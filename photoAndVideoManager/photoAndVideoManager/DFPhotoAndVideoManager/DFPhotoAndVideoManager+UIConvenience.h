@@ -10,21 +10,21 @@
 
 @protocol DFPhotoAndVideoManagerUIDelegate <NSObject>
 
-- (void)imagePickerDidDismissWithAssets:(NSArray<PHAsset*>*)assets;
+- (void)imagePickerDidDismissWithAssets:(NSArray<PHAsset*>*_Nullable)assets;
 - (UIImage*_Nonnull)placeHolderImageForEmptyAlbumCover;
 
-- (UIColor*)tintColorForImagePicker;
+- (UIColor*_Nonnull)tintColorForImagePicker;
 
-- (NSString*)finishButtonTitleForImagePicker;
-- (UIColor*)finishButtonTitleColorForImagePicker;
+- (NSString*_Nonnull)finishButtonTitleForImagePicker;
+- (UIColor*_Nonnull)finishButtonTitleColorForImagePicker;
 
-- (UIColor*)navigationItemColorForImagePicker;
+- (UIColor*_Nonnull)cancelButtonTitleForImagePicker;
 
 @end
 
 @interface DFPhotoAndVideoManager (UIConvenience)
 
-@property (nonatomic,weak) id<DFPhotoAndVideoManagerUIDelegate> uiDelegate;
+@property (nonatomic,weak) _Nullable id<DFPhotoAndVideoManagerUIDelegate> uiDelegate;
 
 //convenience ui components. you provide a navigation controller and present it.
 - (void)embedImagePickerOfType:(DFPAVMediaType)type inNavigationController:(UINavigationController* _Nonnull)navigationController;

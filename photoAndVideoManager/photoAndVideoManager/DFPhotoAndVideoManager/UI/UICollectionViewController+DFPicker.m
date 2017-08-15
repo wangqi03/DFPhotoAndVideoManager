@@ -12,10 +12,18 @@
 @implementation UIViewController (DFPicker)
 
 - (void)addACancelButton {
+    NSString* cancel = nil;
+    if ([[DFPhotoAndVideoManager manager].uiDelegate respondsToSelector:@selector(cancelButtonTitleForImagePicker)]) {
+        cancel = [[DFPhotoAndVideoManager manager].uiDelegate cancelButtonTitleForImagePicker];
+    }
+    if (!cancel) {
+        cancel = @"取消";
+    }
+    
     UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button addTarget:self action:@selector(__dfpav_dismiss) forControlEvents:UIControlEventTouchUpInside];
     button.frame = CGRectMake(0, 0, 44, 44);
-    [button setTitle:@"取消" forState:UIControlStateNormal];
+    [button setTitle:cancel forState:UIControlStateNormal];
     UIBarButtonItem* item = [[UIBarButtonItem alloc] initWithCustomView:button];
     UIColor* color = nil;
     if ([[DFPhotoAndVideoManager manager].uiDelegate respondsToSelector:@selector(navigationItemColorForImagePicker)]) {
