@@ -12,5 +12,6 @@
 @interface DFImagePickerController : UIViewController
 
 @property (nonatomic,strong) NSMutableArray<PHAsset*>* items;
+@property (nonatomic) int maxSelectionCount;
 
 @end

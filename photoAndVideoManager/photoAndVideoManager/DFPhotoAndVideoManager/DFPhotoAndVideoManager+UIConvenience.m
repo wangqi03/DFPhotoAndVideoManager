@@ -28,14 +28,15 @@
             return YES;
         }
         return NO;
-    }];
+    } maxmumSelectionCount:0];
 }
 
-- (void)embedImagePickerOfType:(DFPAVMediaType)type inNavigationController:(UINavigationController *)navigationController defaultAlbumSelectionBlock:(BOOL (^)(PHAssetCollection *))selectionBlock {
+- (void)embedImagePickerOfType:(DFPAVMediaType)type inNavigationController:(UINavigationController *)navigationController defaultAlbumSelectionBlock:(BOOL (^)(PHAssetCollection *))selectionBlock maxmumSelectionCount:(NSInteger)count {
     DFAlbumCollectionController* vc1 = [[DFAlbumCollectionController alloc] initWithNibName:@"DFAlbumCollectionController" bundle:nil];
     vc1.type = type;
     
     DFImagePickerController* vc2 = [[DFImagePickerController alloc] initWithNibName:@"DFImagePickerController" bundle:nil];
+    vc2.maxSelectionCount = count;
     
     [self fetchAllAlbumsWithCompletion:^(NSArray<PHAssetCollection *> *albums) {
         vc1.albums = [albums mutableCopy];

@@ -51,6 +51,14 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.maxSelectionCount&&self.selectedItems.count>=self.maxSelectionCount) {
+        [collectionView deselectItemAtIndexPath:indexPath animated:NO];
+        if ([[DFPhotoAndVideoManager manager].uiDelegate respondsToSelector:@selector(imagePickerReachedMaxmiumSelection)]) {
+            [[DFPhotoAndVideoManager manager].uiDelegate imagePickerReachedMaxmiumSelection];
+        }
+        return;
+    }
+    
     [self.selectedItems addObject:[self.items objectAtIndex:indexPath.row]];
     [self refreshTitle];
 }

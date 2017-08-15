@@ -21,7 +21,13 @@
     [DFPhotoAndVideoManager manager].delegate = self;
     [DFPhotoAndVideoManager manager].uiDelegate = self;
     UINavigationController* navi = [[UINavigationController alloc] init];
-    [[DFPhotoAndVideoManager manager] embedImagePickerOfType:DFPAVMediaTypeAll inNavigationController:navi];
+    [[DFPhotoAndVideoManager manager] embedImagePickerOfType:DFPAVMediaTypeAll inNavigationController:navi defaultAlbumSelectionBlock:^BOOL(PHAssetCollection *album) {
+        if ([album.localizedTitle isEqualToString:@"Camera Roll"] || [album.localizedTitle isEqualToString:@"相机胶卷"]) {
+            return YES;
+        }
+        
+        return NO;
+    } maxmumSelectionCount:1];
     [self presentViewController:navi animated:YES completion:nil];
 }
 

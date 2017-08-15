@@ -21,6 +21,9 @@
 
 - (UIColor*_Nonnull)cancelButtonTitleForImagePicker;
 
+@optional
+- (void)imagePickerReachedMaxmiumSelection;
+
 
 @end
 
@@ -30,7 +33,7 @@
 
 //convenience ui components. you provide a navigation controller and present it.
 - (void)embedImagePickerOfType:(DFPAVMediaType)type inNavigationController:(UINavigationController* _Nonnull)navigationController;
-- (void)embedImagePickerOfType:(DFPAVMediaType)type inNavigationController:(UINavigationController* _Nonnull)navigationController defaultAlbumSelectionBlock:(BOOL (^)(PHAssetCollection*))selectionBlock;
+- (void)embedImagePickerOfType:(DFPAVMediaType)type inNavigationController:(UINavigationController* _Nonnull)navigationController defaultAlbumSelectionBlock:(BOOL (^)(PHAssetCollection*))selectionBlock maxmumSelectionCount:(NSInteger)count;//set to 0 if no limit
 
 //you don't need to call this
 - (void)imagePickerDidDismissWithAssets:(NSArray<PHAsset*>*)assets;
