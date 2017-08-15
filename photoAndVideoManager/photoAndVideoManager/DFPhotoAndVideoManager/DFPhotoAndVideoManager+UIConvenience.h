@@ -13,6 +13,13 @@
 - (void)imagePickerDidDismissWithAssets:(NSArray<PHAsset*>*)assets;
 - (UIImage*_Nonnull)placeHolderImageForEmptyAlbumCover;
 
+- (UIColor*)tintColorForImagePicker;
+
+- (NSString*)finishButtonTitleForImagePicker;
+- (UIColor*)finishButtonTitleColorForImagePicker;
+
+- (UIColor*)navigationItemColorForImagePicker;
+
 @end
 
 @interface DFPhotoAndVideoManager (UIConvenience)

@@ -12,12 +12,29 @@
 @implementation UIViewController (DFPicker)
 
 - (void)addACancelButton {
+    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button addTarget:self action:@selector(__dfpav_dismiss) forControlEvents:UIControlEventTouchUpInside];
+    button.frame = CGRectMake(0, 0, 44, 44);
+    [button setTitle:@"取消" forState:UIControlStateNormal];
+    UIBarButtonItem* item = [[UIBarButtonItem alloc] initWithCustomView:button];
+    UIColor* color = nil;
+    if ([[DFPhotoAndVideoManager manager].uiDelegate respondsToSelector:@selector(navigationItemColorForImagePicker)]) {
+        color = [[DFPhotoAndVideoManager manager].uiDelegate navigationItemColorForImagePicker];
+    }
+    if (!color) {
+        color = [UIColor blueColor];
+    }
+    [button setTitleColor:color forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont systemFontOfSize:15];
+    button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
     
-    UIBarButtonItem* item = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(dismiss)];
-    self.navigationItem.rightBarButtonItem = item;
+    UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    space.width = -30;
+    
+    self.navigationItem.rightBarButtonItems = @[item,space];
 }
 
-- (void)dismiss {
+- (void)__dfpav_dismiss {
     [[DFPhotoAndVideoManager manager] imagePickerDidDismissWithAssets:nil];
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }

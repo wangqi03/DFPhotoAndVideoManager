@@ -11,8 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DFImagePickerController">
             <connections>
-                <outlet property="doneButton" destination="Lgg-JB-qM3" id="mRY-bx-as4"/>
-                <outlet property="toolbar" destination="S1k-1d-Jf0" id="gmn-KR-qsx"/>
+                <outlet property="finishButton" destination="IYx-Ca-tF0" id="vPN-9v-tIe"/>
                 <outlet property="view" destination="iN0-l3-epB" id="U4F-jE-FQJ"/>
             </connections>
         </placeholder>
@@ -21,17 +20,15 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S1k-1d-Jf0">
-                    <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYx-Ca-tF0">
+                    <rect key="frame" x="0.0" y="432" width="320" height="48"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <items>
-                        <barButtonItem enabled="NO" title="完成" id="Lgg-JB-qM3">
-                            <connections>
-                                <action selector="clickedDone:" destination="-1" id="zmZ-J1-H3F"/>
-                            </connections>
-                        </barButtonItem>
-                    </items>
-                </toolbar>
+                    <color key="backgroundColor" red="0.25490196079999999" green="0.71372549019999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="完成"/>
+                    <connections>
+                        <action selector="clickedDone:" destination="-1" eventType="touchUpInside" id="xNo-fo-Qa4"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </view>

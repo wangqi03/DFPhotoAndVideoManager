@@ -56,4 +56,20 @@
     
 }
 
+- (UIColor*)tintColorForImagePicker {
+    return [UIColor orangeColor];
+}
+
+- (NSString*)finishButtonTitleForImagePicker {
+    return @"完成选择";
+}
+
+- (UIColor*)navigationItemColorForImagePicker {
+    return [UIColor blackColor];
+}
+
+- (UIColor*)finishButtonTitleColorForImagePicker {
+    return [UIColor whiteColor];
+}
+
 @end

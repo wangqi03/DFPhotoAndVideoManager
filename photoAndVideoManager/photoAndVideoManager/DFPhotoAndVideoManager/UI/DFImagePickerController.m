@@ -17,8 +17,8 @@
 
 @property (nonatomic,weak) UICollectionView* collectionview;
 
-@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UIButton *finishButton;
+
 
 @property (nonatomic,strong) NSMutableArray<PHAsset*>* selectedItems;
 
@@ -61,12 +61,24 @@
 }
 
 - (void)refreshTitle {
+    
+    NSString* doneText = nil;
+    if ([[DFPhotoAndVideoManager manager].uiDelegate respondsToSelector:@selector(finishButtonTitleForImagePicker)]) {
+        doneText = [[DFPhotoAndVideoManager manager].uiDelegate finishButtonTitleForImagePicker];
+    }
+    
+    if (!doneText) {
+        doneText = @"完成";
+    }
+    
     if (self.selectedItems.count) {
-        [self.doneButton setTitle:[NSString stringWithFormat:@"完成(%d)",self.selectedItems.count]];
-        self.doneButton.enabled = YES;
+        [self.finishButton setTitle:[NSString stringWithFormat:@"%@(%lu)",doneText,(unsigned long)self.selectedItems.count] forState:UIControlStateNormal];
+        self.finishButton.enabled = YES;
+        self.finishButton.alpha = 1;
     } else {
-        [self.doneButton setTitle:@"完成"];
-        self.doneButton.enabled = NO;
+        [self.finishButton setTitle:doneText forState:UIControlStateNormal];
+        self.finishButton.enabled = NO;
+        self.finishButton.alpha = .6;
     }
 }
 
@@ -83,6 +95,27 @@
     
     [self addACancelButton];
     [self performSelector:@selector(scrollToBottom) withObject:nil afterDelay:0.1];
+    
+    UIColor* color = nil;
+    if ([[DFPhotoAndVideoManager manager].uiDelegate respondsToSelector:@selector(tintColorForImagePicker)]) {
+        color = [[DFPhotoAndVideoManager manager].uiDelegate tintColorForImagePicker];
+    }
+    if (!color) {
+        color = [UIColor blueColor];
+    }
+    
+    self.finishButton.backgroundColor = color;
+    
+    color = nil;
+    if ([[DFPhotoAndVideoManager manager].uiDelegate respondsToSelector:@selector(finishButtonTitleColorForImagePicker)]) {
+        color = [[DFPhotoAndVideoManager manager].uiDelegate finishButtonTitleColorForImagePicker];
+    }
+    
+    if (!color) {
+        color = [UIColor whiteColor];
+    }
+    
+    [self.finishButton setTitleColor:color forState:UIControlStateNormal];
 }
 
 - (void)setItems:(NSMutableArray<PHAsset *> *)items {
@@ -107,9 +140,9 @@
     collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     collectionView.backgroundColor = [UIColor whiteColor];
     collectionView.alwaysBounceVertical = YES;
-    collectionView.contentInset = UIEdgeInsetsMake(SPACING, SPACING, self.toolbar.frame.size.height+SPACING, SPACING);
+    collectionView.contentInset = UIEdgeInsetsMake(SPACING, SPACING, self.finishButton.frame.size.height+SPACING, SPACING);
     
-    [self.view insertSubview:collectionView belowSubview:self.toolbar];
+    [self.view insertSubview:collectionView belowSubview:self.finishButton];
     
     return collectionView;
 }
