@@ -14,11 +14,13 @@
 - (UIImage*_Nonnull)placeHolderImageForEmptyAlbumCover;
 
 - (UIColor*_Nonnull)tintColorForImagePicker;
+- (UIColor*_Nonnull)navigationItemColorForImagePicker;
 
 - (NSString*_Nonnull)finishButtonTitleForImagePicker;
 - (UIColor*_Nonnull)finishButtonTitleColorForImagePicker;
 
 - (UIColor*_Nonnull)cancelButtonTitleForImagePicker;
+
 
 @end
 
