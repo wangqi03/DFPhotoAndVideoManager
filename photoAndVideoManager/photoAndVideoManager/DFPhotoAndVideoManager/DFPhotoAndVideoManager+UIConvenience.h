@@ -19,7 +19,7 @@
 - (NSString*_Nonnull)finishButtonTitleForImagePicker;
 - (UIColor*_Nonnull)finishButtonTitleColorForImagePicker;
 
-- (UIColor*_Nonnull)cancelButtonTitleForImagePicker;
+- (NSString*_Nonnull)cancelButtonTitleForImagePicker;
 
 @optional
 - (void)imagePickerReachedMaxmiumSelection;
