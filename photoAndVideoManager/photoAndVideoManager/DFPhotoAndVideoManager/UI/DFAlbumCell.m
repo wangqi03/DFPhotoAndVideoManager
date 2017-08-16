@@ -40,6 +40,8 @@
                     self.coverImage.image = result;
                 } else if ([[DFPhotoAndVideoManager manager].uiDelegate respondsToSelector:@selector(placeHolderImageForEmptyAlbumCover)]) {
                     self.coverImage.image = [[DFPhotoAndVideoManager manager].uiDelegate placeHolderImageForEmptyAlbumCover];
+                } else {
+                    self.coverImage.image = nil;
                 }
             });
         }];
