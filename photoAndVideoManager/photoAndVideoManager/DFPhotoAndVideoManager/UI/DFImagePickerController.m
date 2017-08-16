@@ -123,6 +123,8 @@
         color = [UIColor whiteColor];
     }
     
+    [self refreshTitle];
+    
     [self.finishButton setTitleColor:color forState:UIControlStateNormal];
 }
 
