@@ -123,6 +123,40 @@
     }];
 }
 
+- (void)saveItemOfType:(DFPAVMediaType)type atUrl:(NSString *)url withCompletion:(void (^)(BOOL, NSError *))completion {
+    if (type == DFPAVMediaTypeAll) {
+        completion(NO,nil);
+        return;
+    }
+    
+    [self guaranteeAuthBeforeDoing:^{
+        [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+            if (type == DFPAVMediaTypeImage) {
+                [PHAssetChangeRequest creationRequestForAssetFromImageAtFileURL:[NSURL fileURLWithPath:url]];
+            } else if (type == DFPAVMediaTypeVideo) {
+                [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:[NSURL fileURLWithPath:url]];
+            }
+        } completionHandler:^(BOOL success, NSError * _Nullable error) {
+            completion(success,error);
+        }];
+    }];
+}
+
+- (void)saveImage:(UIImage *)image withCompletion:(void (^)(BOOL, NSError *))completion {
+    if (!image) {
+        completion(NO,nil);
+        return;
+    }
+    
+    [self guaranteeAuthBeforeDoing:^{
+        [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+            [PHAssetChangeRequest creationRequestForAssetFromImage:image];
+        } completionHandler:^(BOOL success, NSError * _Nullable error) {
+            completion(success,error);
+        }];
+    }];
+}
+
 #pragma mark - initialize and auth
 + (instancetype)manager {
     static DFPhotoAndVideoManager *sharedInstance = nil;

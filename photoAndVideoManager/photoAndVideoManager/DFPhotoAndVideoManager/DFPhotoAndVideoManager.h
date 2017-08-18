@@ -50,4 +50,8 @@ typedef enum {
 //cancel request
 - (void)cancelImageRequest:(PHImageRequestID)requestId;
 
+//save
+- (void)saveItemOfType:(DFPAVMediaType)type atUrl:(NSString*)url withCompletion:(void(^)(BOOL,NSError*))completion;
+- (void)saveImage:(UIImage*)image withCompletion:(void(^)(BOOL,NSError*))completion;
+
 @end
